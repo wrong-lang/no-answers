@@ -3,17 +3,13 @@
 @tailwind utilities;
 
 html {
-    @apply md:px-12 py-6 px-4 bg-gradient-to-bl from-yellow-200 via-green-200 to-blue-200;
+    @apply bg-gradient-to-bl from-red-900 to-pink-600;
     font-family: 'Prompt', sans-serif;
 }
-#bridge-text {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: 0.4em;
-    white-space: nowrap;
-    color: #ffffff;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-    font-family: 'Ayuthaya', 'Thonburi', 'K2D', sans-serif;
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
 }
 
 @font-face {
@@ -29,4 +25,20 @@ html {
     font-weight: 400;
     src: local("K2D"), local("K2D"),
     url("/K2D-Regular.ttf") format("truetype");
+}
+
+@keyframes drop {
+    from {
+        opacity: .25;
+        transform-origin: 50% 50%;
+        transform: rotate(25deg) scale(5) translate(-40px, 70px);
+        transition: all ease-in;
+
+        filter: drop-shadow(40px -70px 20px black);
+    }
+    to {
+        opacity: .8;
+        transform: rotate(-15deg) scale(1);
+        filter: drop-shadow(0 4px 4px black);
+    }
 }
